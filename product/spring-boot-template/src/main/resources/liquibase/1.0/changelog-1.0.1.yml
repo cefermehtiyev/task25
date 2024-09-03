@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Description table
+      author: Cefer Mehtiyev
+      changes:
+        - createTable:
+            tableName: descriptions
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+
+
+  - changeSet:
+      id: description foriegn key
+      author: cefermehtiyev
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: descriptions
+            baseColumnNames: id
+            constraintName: fk_productdescription_description
+            referencedTableName: products
+            referencedColumnNames: id
