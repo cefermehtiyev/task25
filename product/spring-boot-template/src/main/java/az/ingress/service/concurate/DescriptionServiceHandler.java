@@ -20,12 +20,7 @@ public class DescriptionServiceHandler implements DescriptionService {
 
     private final DescriptionRepository descriptionRepository;
 
-    @Override
-    public void addDescription(ProductEntity product, DescriptionRequest descriptionRequest) {
-        var description = DESCRIPTION_MAPPER.buildDescriptionEntity(descriptionRequest);
-        description.setProduct(product);
-        descriptionRepository.save(description);
-    }
+
 
     @Override
     public DescriptionResponse getDescription(Long id) {

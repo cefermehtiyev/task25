@@ -16,12 +16,5 @@ public class ProductResponseDto {
     private String productName;
     private BigDecimal price;
 
-    @Override
-    public String toString() {
-        return "ProductResponseDto{" +
-                "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", price=" + price +
-                '}';
-    }
+
 }

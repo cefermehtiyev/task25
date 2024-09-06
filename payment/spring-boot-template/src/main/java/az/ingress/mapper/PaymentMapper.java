@@ -2,7 +2,6 @@ package az.ingress.mapper;
 
 import az.ingress.dao.entity.PaymentEntity;
 import az.ingress.model.client.ProductResponseDto;
-import az.ingress.model.enums.PaymentStatus;
 import az.ingress.model.request.PaymentRequest;
 
 import static az.ingress.model.enums.PaymentStatus.COMPLETED;

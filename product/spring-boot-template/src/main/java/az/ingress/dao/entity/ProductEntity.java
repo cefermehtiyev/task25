@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -20,6 +22,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 import static javax.persistence.CascadeType.MERGE;
@@ -50,8 +53,12 @@ public class ProductEntity {
             cascade = {PERSIST,MERGE},
             fetch = LAZY
     )
-    @ToString.Exclude
     DescriptionEntity description;
+
+    @CreationTimestamp
+    LocalDateTime created_at;
+    @UpdateTimestamp
+    LocalDateTime updated_at;
 
     @Override
     public boolean equals(Object o) {

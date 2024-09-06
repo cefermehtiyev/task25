@@ -14,7 +14,6 @@ import static az.ingress.mapper.PaymentMapper.PAYMENT_MAPPER;
 @Service
 public class PaymentServiceHandler implements PaymentService {
 
-    private static final Logger log = LoggerFactory.getLogger(PaymentServiceHandler.class);
     private final PaymentRepository paymentRepository;
     private final ProductClient productClient;
 
@@ -24,7 +23,5 @@ public class PaymentServiceHandler implements PaymentService {
         var product = productClient.getProduct(id);
         var payment = PAYMENT_MAPPER.buildPaymentEntity(paymentRequest,product);
         paymentRepository.save(payment);
-
-
     }
 }

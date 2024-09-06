@@ -2,15 +2,18 @@ package az.ingress.model.constants;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
-
-@AllArgsConstructor
+@Getter
+@RequiredArgsConstructor
 public enum ExceptionConstants {
     UNEXPECTED_EXCEPTION("UNEXPECTED_EXCEPTION","Unexpected exception"),
-    PAYMENT_NOT_FOUND("PAYMENT_NOT_FOUND","Payment not found"),;
+    PAYMENT_NOT_FOUND("PAYMENT_NOT_FOUND","Payment not found"),
+    CLIENT_ERROR("CLIENT_ERROR", "Client Error");
 
-    String code;
-    String message;
+    private final String code;
+    private final String message;
 
 
 }

@@ -14,7 +14,7 @@ public enum DescriptionMapper {
     }
 
     public DescriptionResponse buildDescriptionResponse(DescriptionEntity descriptionEntity){
-        return DescriptionResponse.builder()
+        return DescriptionResponse.builder().id(descriptionEntity.getId())
                 .description(descriptionEntity.getDescription())
                 .build();
     }

@@ -1,18 +1,20 @@
 package az.ingress.model.consrants;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Getter
-@AllArgsConstructor
+@RequiredArgsConstructor
 public enum ExceptionConstants {
-    UNEXPECTED_EXCEPTION("Unexpected exception", "unexpected Exception"),
+    UNEXPECTED_EXCEPTION("UNEXPECTED_EXCEPTION", "unexpected Exception"),
+    HTTP_REQUEST_METHOD_NOT_SUPPORTED_EXCEPTION("HTTP_REQUEST_METHOD_NOT_SUPPORTED_EXCEPTION", "HTTP request method not supported"),
     PRODUCT_NOT_FOUND("PRODUCT_NOT_FOUND", "Product not Found"),
-    DESCRIPTION_NOT_FOUND("DESCRIPTION_NOT_FOUND", "description Not Found"),;
+    DESCRIPTION_NOT_FOUND("DESCRIPTION_NOT_FOUND", "description Not Found"),
+    ;
 
-    String code;
-    String message;
+    private final String code;
+    private final String message;
 
 
 }
