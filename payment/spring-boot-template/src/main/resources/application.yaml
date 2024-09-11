@@ -2,7 +2,7 @@ server:
   port: 9494
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/payment_test
+    url: jdbc:postgresql://localhost:1736/payment
     username: postgres
     password: j@vacefer2005
   jpa:
@@ -10,12 +10,13 @@ spring:
     open-in-view: false
   liquibase:
     change-log: classpath:liquibase/changelog-master.yml
-
-
 feign:
   clients:
     ms-product:
       url: http://localhost:9999
+redis:
+  server:
+    urls: redis://localhost:6379
 
 
 logging:

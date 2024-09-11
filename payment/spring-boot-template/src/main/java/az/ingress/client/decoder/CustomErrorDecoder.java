@@ -30,7 +30,7 @@ public class CustomErrorDecoder implements ErrorDecoder {
 
         }
 
-        if (jsonNode.has(MESSAGE.getValue())){
+        if (jsonNode.has(MESSAGE.getValue())&&jsonNode.has(CODE.getValue())){
             errorMessage = jsonNode.get(MESSAGE.getValue()).asText();
             errorCode = jsonNode.get(CODE.getValue()).asText();
         }

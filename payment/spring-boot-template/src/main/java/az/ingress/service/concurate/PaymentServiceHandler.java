@@ -5,8 +5,7 @@ import az.ingress.dao.repository.PaymentRepository;
 import az.ingress.model.request.PaymentRequest;
 import az.ingress.service.abstraction.PaymentService;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import org.springframework.stereotype.Service;
 
 import static az.ingress.mapper.PaymentMapper.PAYMENT_MAPPER;
