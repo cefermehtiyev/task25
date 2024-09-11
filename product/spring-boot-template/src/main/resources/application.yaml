@@ -1,5 +1,16 @@
 server:
-  port: 8080
+  port: 9999
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:1737/postgres
+    username: postgres
+    password: j@vacefer2005
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+    open-in-view: false
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yml
 
 logging:
   level:

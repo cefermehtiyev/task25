@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: 'j@vacefer2005'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_DB: 'postgres'
+    ports:
+      - '1737:5432'
+    volumes:
+      - my-db:/var/lib/postgresql/data
+  adminer:
+    image: adminer:latest
+    ports:
+      - '6293:8080'
+
+volumes:
+  my-db:

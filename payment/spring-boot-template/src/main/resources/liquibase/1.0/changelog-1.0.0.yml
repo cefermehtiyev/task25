@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Payment table
+      author: Cefer Mehtiyev
+      changes:
+        - createTable:
+            tableName: payments
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: product_name
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: card_number
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: amount
+                  type: numeric(16,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: version
+                  type: bigint
+                  constraints:
+                    nullable: false
